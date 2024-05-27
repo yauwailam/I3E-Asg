@@ -39,12 +39,13 @@ public class Player : MonoBehaviour
             currentDoor = null;
         }
 
-        if(currentCollectible != null)
-        {
-            Debug.Log("call");
-            IncreaseScore(currentCollectible.myScore);
-            currentCollectible.Collected();
-        }
+        //if(currentCollectible != null)
+        //{
+          //  Debug.Log("call");
+            //IncreaseScore(currentCollectible.myScore);
+            //currentCollectible.Collected();
+        //} 
+        //} 
     }
     void Update()
     {

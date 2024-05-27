@@ -21,7 +21,7 @@ public class Collectible : MonoBehaviour
     /// <summary>
     /// Performs actions related to collection of the collectible
     /// </summary>
-    public void Collected()
+    public virtual void Collected(GameObject other)
     {
         // Destroy the attached GameObject
         Destroy(gameObject);
@@ -42,6 +42,7 @@ public class Collectible : MonoBehaviour
             // Update the player that I am the current collectible.
             Debug.Log("enter trigger");
             other.gameObject.GetComponent<Player>().UpdateCollectible(this);
+            Collected(other.gameObject);
 
         }
     }
